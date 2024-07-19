@@ -2,7 +2,7 @@
 
 > The project has completely moved to GitHub. Please click on the following link to visit the new repository.
 
-https://github.com/mylinuxforwork/hyprland-dotfiles
+https://github.com/mylinuxforwork/dotfiles
 
 # ML4W Hyprland Dotfiles 2.9.3
 
