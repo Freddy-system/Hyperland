@@ -1,3 +1,9 @@
+# IMPORTANT: THE PROJECT HAS BEEN MIGRATED TO GITHUB
+
+> The project has completely moved to GitHub. Please click on the following link to visit the new repository.
+
+https://github.com/mylinuxforwork/hyprland-dotfiles
+
 # ML4W Hyprland Dotfiles 2.9.3
 
 An advanced configuration of Hyprland for Arch Linux based distributions. This package includes an installation script to install and setup the required components.
