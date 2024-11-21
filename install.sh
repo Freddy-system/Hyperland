@@ -73,8 +73,7 @@ source .install/restore.sh
 
 # Setup the input devices
 source .install/keyboard.sh
-
-source .install/neovim.sh
+ 
 source .install/hook.sh
 source .install/vm.sh
 source .install/copy.sh

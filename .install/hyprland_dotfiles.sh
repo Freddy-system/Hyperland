@@ -8,11 +8,7 @@ fi
 if [ -d ~/dotfiles-versions/$version/vim ]; then
     _installSymLink vim ~/.config/vim ~/dotfiles/vim/ ~/.config
 fi
-if [ $neovim == "1" ] ;then
-    if [ -d ~/dotfiles-versions/$version/nvim ]; then
-        _installSymLink nvim ~/.config/nvim ~/dotfiles/nvim/ ~/.config
-    fi
-fi
+ 
 if [ -d ~/dotfiles-versions/$version/starship ]; then
     _installSymLink starship ~/.config/starship.toml ~/dotfiles/starship/starship.toml ~/.config/starship.toml
 fi

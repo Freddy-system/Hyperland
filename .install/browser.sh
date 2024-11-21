@@ -3,30 +3,30 @@
 # ------------------------------------------------------
 if [ -d ~/dotfiles ] ;then
     current_browser=$(cat ~/dotfiles/.settings/browser.sh)
-    if [ ! "$current_browser" == "firefox" ] ;then
+    if [ ! "$current_browser" == "brave" ] ;then
         echo -e "${GREEN}"
         figlet "Browser"
         echo -e "${NONE}"
         echo ":: The current browser is $current_browser"
-        if gum confirm "Do your want to install Firefox instead?" ;then
-            echo ":: Installing Firefox..."
-            _installPackagesPacman "firefox"
-            echo ":: Setting Firefox as Default browser"
-            echo "firefox" > ~/dotfiles/.settings/browser.sh
-            echo "firefox https://chat.openai.com" > ~/dotfiles/.settings/ai.sh
-            xdg-settings set default-web-browser firefox.desktop
+        if gum confirm "Do you want to install Brave instead?" ;then
+            echo ":: Installing Brave..."
+            _installPackagesPacman "brave-browser"
+            echo ":: Setting Brave as Default browser"
+            echo "brave" > ~/dotfiles/.settings/browser.sh
+            echo "brave https://chat.openai.com" > ~/dotfiles/.settings/ai.sh
+            xdg-settings set default-web-browser brave-browser.desktop
             echo
-            gum spin --spinner dot --title "Recommended to change the browser icon to Firefox in ~/dotfiles/.settings/waybar-quicklinks.json" -- sleep 5
+            gum spin --spinner dot --title "Recommended to change the browser icon to Brave in ~/dotfiles/.settings/waybar-quicklinks.json" -- sleep 5
         elif [ $? -eq 130 ]; then
             echo ":: Installation canceled."
             exit 130
         else
-            echo ":: Installation of Firefox skipped"
+            echo ":: Installation of Brave skipped"
         fi
     fi
 else
-    echo ":: Firefox will be installed as default browser."
-    _installPackagesPacman "firefox"
-    echo ":: Setting Firefox as Default browser"
-    xdg-settings set default-web-browser firefox.desktop
+    echo ":: Brave will be installed as the default browser."
+    _installPackagesPacman "brave-browser"
+    echo ":: Setting Brave as Default browser"
+    xdg-settings set default-web-browser brave-browser.desktop
 fi

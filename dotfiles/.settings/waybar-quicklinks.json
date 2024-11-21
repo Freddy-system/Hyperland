@@ -6,8 +6,8 @@
     }, 
     "custom/quicklink2": {
         "format": "",
-        "on-click": "firefox",
-        "tooltip-format": "Open Firefox"
+        "on-click": "Brave",
+        "tooltip-format": "Open Brave"
     },
     "custom/quicklink3": {
         "format": "",
@@ -25,10 +25,7 @@
         "orientation": "horizontal",
         "modules": [
             "custom/quicklink2",
-            "custom/quicklink3",
-            /*
-            "custom/quicklink4",
-            */
+            "custom/quicklink3", 
             "custom/quicklinkempty"
         ]
     }

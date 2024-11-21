@@ -13,7 +13,7 @@
     "hyprland/workspaces" : {
         "on-scroll-up": "hyprctl dispatch workspace r-1",
         "on-scroll-down": "hyprctl dispatch workspace r+1",        
-        "on-click": "activate",
+        "on-click": "activar",
         "active-only": false,
         "all-outputs": true,
         "format": "{}",
@@ -32,8 +32,8 @@
         "format": "{icon}",
         "icon-size": 18,
         "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
+        "on-click": "activar",
+        "on-click-middle": "cerrar",
         "ignore-list": [
            "Alacritty"
         ],
@@ -63,14 +63,14 @@
         "on-click": "sleep 0.1 && ~/dotfiles/eww/ml4w-sidebar/launch.sh",
         "on-click-right": "sleep 0.1 && ~/dotfiles/apps/ML4W_Welcome-x86_64.AppImage",
         "format": " ",
-        "tooltip-format": "Open Sidebar"
+        "tooltip-format": "Abrir barra lateral"
     },
 
     // ML4W Hyprland Settings App
     "custom/ml4w-hyprland-settings": {
         "on-click": "~/dotfiles/apps/ML4W_Hyprland_Settings-x86_64.AppImage",
         "format": " ",
-        "tooltip-format": "ML4W Hyprland Settings"
+        "tooltip-format": "Configuración de ML4W Hyprland"
     },
     
     // Empty
@@ -78,10 +78,10 @@
         "format": ""
     },
 
-    // Empty
+    // tools
     "custom/tools": {
         "format": "",
-        "tooltip-format": "Tools"
+        "tooltip-format": "Herramientas"
     },
     
     // Cliphist
@@ -90,7 +90,7 @@
         "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
         "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
         "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
-        "tooltip-format": "Clipboard Manager"
+        "tooltip-format": "Gestor de portapapeles"
     },
 
     // Updates Count
@@ -109,21 +109,21 @@
         "format": "",
         "on-click": "waypaper",
         "on-click-right": "~/dotfiles/hypr/scripts/wallpaper-effects.sh",
-        "tooltip-format": "Left: Select a wallpaper\nRight: Select wallpaper effect"
+        "tooltip-format": "Izquierda: Seleccionar fondo de pantalla\nDerecha: Seleccionar efecto de fondo"
     },
 
     // Waybar Themes
     "custom/waybarthemes": {
         "format": "",
         "on-click": "~/dotfiles/waybar/themeswitcher.sh",
-        "tooltip-format": "Select a waybar theme"
+        "tooltip-format": "Seleccionar un tema de Waybar"
     },
     
     // Settings
     "custom/settings": {
         "format": "",
         "on-click": "~/dotfiles/apps/ML4W_Dotfiles_Settings-x86_64.AppImage",
-        "tooltip-format": "ML4W Dotfiles Settings"
+        "tooltip-format": "Configuración de Dotfiles ML4W"
     },
 
     // Keybindings
@@ -137,14 +137,14 @@
     "custom/chatgpt": {
         "format": " ",
         "on-click": "~/dotfiles/.settings/ai.sh",
-        "tooltip-format": "AI Support"
+        "tooltip-format": "Soporte de IA"
     },
 
     // Calculator
     "custom/calculator": {
         "format": "",
         "on-click": "qalculate-gtk",
-        "tooltip-format": "Open calculator"
+        "tooltip-format": "Abrir calculadora"
     },
 
     // Windows VM
@@ -157,11 +157,11 @@
     // Rofi Application Launcher
     "custom/appmenu": {
         // START APPS LABEL
-        "format": "Apps",
+        "format": "Aplicaciones",
         // END APPS LABEL
         "on-click": "sleep 0.2;rofi -show drun -replace",
         "on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
-        "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
+        "tooltip-format": "Izquierda: Abrir lanzador de aplicaciones\nDerecha: Mostrar todas las combinaciones de teclas"
     },
 
     // Rofi Application Launcher
@@ -169,20 +169,20 @@
         "format": "",
         "on-click": "rofi -show drun -replace",
         "on-click-right": "~/dotfiles/hypr/scripts/keybindings.sh",
-        "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
+        "tooltip-format": "Izquierda: Abrir lanzador de aplicaciones\nDerecha: Mostrar todas las combinaciones de teclas"
     },    
 
     // Power Menu
     "custom/exit": {
         "format": "",
         "on-click": "wlogout",
-        "tooltip-format": "Power Menu"
+        "tooltip-format": "Menú de apagado"
     },
 
     // Hyprshade
     "custom/hyprshade": {
         "format": "",
-        "tooltip-format": "Toggle Screen Shader",
+        "tooltip-format": "Alternar filtro de pantalla",
         "on-click": "sleep 0.5; ~/dotfiles/hypr/scripts/hyprshade.sh",
         "on-click-right": "sleep 0.5; ~/dotfiles/hypr/scripts/hyprshade.sh rofi"
     },
@@ -319,11 +319,11 @@
         "format": "{ifname}",
         "format-wifi": "   {signalStrength}%",
         "format-ethernet": "  {ifname}",
-        "format-disconnected": "Disconnected",
-        "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-        "tooltip-format-disconnected": "Disconnected",
+        "format-disconnected": "Desconectado",
+        "tooltip-format": " {ifname} vía {gwaddri}",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nFuerza: {signalStrength}%\nFrecuencia: {frequency}MHz\nSubida: {bandwidthUpBits} Bajada: {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\nSubida: {bandwidthUpBits} Bajada: {bandwidthDownBits}",
+        "tooltip-format-disconnected": "Desconectado",
         "max-length": 50,
         "on-click": "alacritty --class dotfiles-floating -e nmtui",
         "on-click-right": "~/dotfiles/.settings/networkmanager.sh"
@@ -348,9 +348,9 @@
     // Pulseaudio
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}   {volume}%",
-        "format-bluetooth": "{volume}%  {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format": " {icon}   {volume}%",
+        "format-bluetooth": "{volume}%  {icon}  {format_source}",
+        "format-bluetooth-muted": " {icon}  {format_source}",
         "format-muted": " {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
